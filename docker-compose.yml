@@ -1,0 +1,8 @@
+web:
+  build: .
+  command: gulp
+  volumes:
+    - .:/app/
+    - /app/node_modules
+  ports:
+    - "4000:4000"
