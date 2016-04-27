@@ -1,6 +1,8 @@
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var spawn = require('child_process').spawn;
+var watch = require('gulp-watch');
+var batch = require('gulp-batch');
 
 var server;
 
@@ -9,7 +11,9 @@ gulp.task('default', ['serve:devserver']);
 
 // part of the default task, provides a watch over the server side code, on a change it will run the `server` task
 gulp.task('serve:devserver', ['server'], function() {
-  gulp.watch(['./**/*.js'], ['server']);
+  watch('**/*.js', batch(function (events, done) {
+        gulp.start('server', done);
+    }));
 });
 
 // Provides a reloading node server for the development environment

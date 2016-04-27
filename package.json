@@ -11,6 +11,11 @@
   "dependencies": {
     "express": "^4.13.4",
     "express-handlebars": "^3.0.0",
-    "gulp": "^3.9.1"
+    
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-batch": "^1.0.5",
+    "gulp-watch": "^4.3.5"
   }
 }
