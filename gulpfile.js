@@ -9,7 +9,7 @@ gulp.task('default', ['serve:devserver']);
 
 // part of the default task, provides a watch over the server side code, on a change it will run the `server` task
 gulp.task('serve:devserver', ['server'], function() {
-  gulp.watch(['./src/**/*.js'], ['server']);
+  gulp.watch(['./**/*.js'], ['server']);
 });
 
 // Provides a reloading node server for the development environment
