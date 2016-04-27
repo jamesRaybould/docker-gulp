@@ -1,6 +1,7 @@
 web:
   build: .
-  command: gulp
+    command: gulp
+  # command: node ./src/app.js
   volumes:
     - .:/app/
     - /app/node_modules
